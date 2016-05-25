@@ -1,0 +1,11 @@
+include 'webminning-site'
+
+rootProject.name = "webminning"
+
+renameChildBuildFiles(rootProject)
+
+void renameChildBuildFiles(parentProject) {
+    for (p in parentProject.children) {
+        p.buildFileName = (p.name - "webminning-") + ".gradle"
+    }
+}

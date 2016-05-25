@@ -1,0 +1,24 @@
+apply plugin: 'eclipse-wtp'
+apply plugin: 'war'
+
+gradle.taskGraph.whenReady {taskGraph -> 
+	def task = taskGraph.getAllTasks().find {it.path == ':webminning-site:eclipseWstComponent'}
+	if(task) {
+		task.enabled = false
+	}
+}
+
+dependencies {
+	
+	runtime 'ch.qos.logback:logback-classic:1.1.3'
+
+	compile 'org.apache.lucene:lucene-core:6.0.0'
+	compile group: 'org.apache.lucene', name: 'lucene-queryparser', version: '6.0.0'
+	compile group: 'org.apache.lucene', name: 'lucene-analyzers-common', version: '6.0.0'
+	
+	//servlet api
+	provided 'javax.servlet:javax.servlet-api:3.0.1'
+	provided 'javax.servlet.jsp:javax.servlet.jsp-api:2.2.1'
+}
+
+

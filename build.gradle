@@ -8,7 +8,7 @@ buildscript {
 }
 
 configure(allprojects) { project ->
-	group = "edu.cqu.chandler"
+	group = "xyz.chandlerph"
 
 	ext.junitVersion         = "4.12"
 	ext.hamcrestVersion      = "1.3"

@@ -1,4 +1,4 @@
-package edu.cqu.chandler.webminning;
+package xyz.chandlerph.webminning.site;
 
 
 import java.io.BufferedReader;

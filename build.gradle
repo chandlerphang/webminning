@@ -54,7 +54,8 @@ configure(allprojects) { project ->
 
 	repositories {
     	//maven { url 'file://d:/maven_repo' }
-		maven { url "http://repo.zyrone.com/content/groups/public/" }
+		//maven { url "http://repo.zyrone.com/content/groups/public/" }
+		maven { url 'https://repo1.maven.org/maven2/' }
 	}
 
 	dependencies {
@@ -66,6 +67,7 @@ configure(allprojects) { project ->
 		}
 		testCompile("org.hamcrest:hamcrest-all:${hamcrestVersion}")
 	}
+
 }
 
 configure(subprojects) { subproject ->

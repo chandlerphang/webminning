@@ -15,5 +15,6 @@
 	<mappers>
 		<mapper resource="mappers/UserBaseInfoMapper.xml"/>
 		<mapper resource="mappers/UserDetailInfoMapper.xml"/>
+		<mapper resource="mappers/CookiesMapper.xml"/>
 	</mappers>
 </configuration>

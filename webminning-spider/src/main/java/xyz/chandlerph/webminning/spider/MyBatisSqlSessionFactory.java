@@ -8,6 +8,7 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 import tk.mybatis.mapper.mapperhelper.MapperHelper;
+import xyz.chandlerph.webminning.spider.mappers.CookiesMapper;
 import xyz.chandlerph.webminning.spider.mappers.UserBaseInfoMapper;
 import xyz.chandlerph.webminning.spider.mappers.UserDetailInfoMapper;
 
@@ -25,7 +26,7 @@ public class MyBatisSqlSessionFactory {
 				MapperHelper mapperHelper = new MapperHelper();
 				mapperHelper.registerMapper(UserBaseInfoMapper.class);
 				mapperHelper.registerMapper(UserDetailInfoMapper.class);
-				
+				mapperHelper.registerMapper(CookiesMapper.class);
 				
 				mapperHelper.processConfiguration(INSTANCE.getConfiguration());
 				
